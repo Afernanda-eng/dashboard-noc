@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard de Monitoramento NOC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Dashboard de Monitoramento - NOC</h1>
+    <span class="env-label">Ambiente de Simulação</span>
+  </header>
+
+  <main class="container">
+    <!-- Resumo geral -->
+    <section class="cards-resumo">
+      <div class="card-resumo">
+        <span class="label">Servidores Online</span>
+        <span id="online-count" class="value">0</span>
+      </div>
+      <div class="card-resumo">
+        <span class="label">Servidores com Alerta</span>
+        <span id="alert-count" class="value">0</span>
+      </div>
+      <div class="card-resumo">
+        <span class="label">Servidores Offline</span>
+        <span id="offline-count" class="value">0</span>
+      </div>
+      <div class="card-resumo">
+        <span class="label">Incidentes Abertos</span>
+        <span id="incident-count" class="value">0</span>
+      </div>
+    </section>
+
+    <!-- Lista de servidores -->
+    <section class="section-block">
+      <div class="section-header">
+        <h2>Servidores Monitorados</h2>
+        <small>Atualiza automaticamente a cada 5 segundos</small>
+      </div>
+      <div id="servers-grid" class="servers-grid">
+        <!-- JS vai preencher -->
+      </div>
+    </section>
+
+    <!-- Incidentes -->
+    <section class="section-block">
+      <div class="section-header">
+        <h2>Incidentes Recentes</h2>
+        <button id="clear-incidents" class="btn-secondary">Limpar incidentes</button>
+      </div>
+      <table class="incident-table">
+        <thead>
+          <tr>
+            <th>Horário</th>
+            <th>Servidor</th>
+            <th>Tipo</th>
+            <th>Severidade</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="incident-body">
+          <!-- JS vai preencher -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Projeto de estudo para área de NOC / Suporte Técnico</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
